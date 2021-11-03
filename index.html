@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Using CSS Grid</title>
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			/*grid-template-columns: 30% 20% 50%;*/
-			/*grid-template-columns: 1fr 2fr 1fr;*/
-            grid-template-columns: repeat(3,1fr);
-			max-width: 960px;
-			margin: 0 auto;
-		}
-		#content div{
-			background: #3bbced;
-			padding: 30px;
-		}
-		#content div:nth-child(even){
-			background: #777;
-			padding: 30px;
-		}
-	</style>
-</head>
-<body>
-
-	<div id="content">
-
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		<div>4</div>
-		<div>5</div>
-		<div>6</div>
-		<div>7</div>
-		<div>8</div>
-		<div>9</div>
-
-	</div>
-
-</body>
+  <head>
+    <title>Using CSS Grid</title>
+    <style>
+      body {
+        color: #fff;
+        font-family: "Nunito Semibold";
+        text-align: center;
+      }
+      #content {
+        display: grid;
+        /*grid-template-columns: 30% 20% 50%;*/
+        /*grid-template-columns: 1fr 2fr 1fr;*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, minmax(200px,auto));
+        /*grid-auto-rows: minmax(200px,auto);*/
+        
+        /*grid-column-gap:10px;
+        grid-row-gap:10px;*/
+        grid-gap:10px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      #content div {
+        background: #3bbced;
+        padding: 30px;
+      }
+      #content div:nth-child(even) {
+        background: #777;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div>1</div>
+      <div>2</div>
+      <div>
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+        minima eveniet ipsum tempore, perspiciatis perferendis culpa, vel nobis
+        vitae doloribus facere reprehenderit aut, ab id debitis consequatur ad
+        impedit sunt.3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+        minima eveniet ipsum tempore, perspiciatis perferendis culpa, vel nobis
+        vitae doloribus facere reprehenderit aut, ab id debitis consequatur ad
+        impedit sunt.
+      </div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
 </html>
